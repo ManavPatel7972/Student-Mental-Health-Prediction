@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    image: student-mental-health-backend:latest
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: /api
+    image: student-mental-health-frontend:latest
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
