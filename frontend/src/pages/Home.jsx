@@ -7,6 +7,9 @@ import {
   BarChart3,
   Sparkles,
   Activity,
+  Database,
+  Gauge,
+  ListChecks,
 } from "lucide-react";
 
 function Home() {
@@ -88,6 +91,57 @@ function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* MODEL OVERVIEW */}
+      <section className="model-section">
+        <div className="model-intro">
+          <span className="section-label">MODEL AT A GLANCE</span>
+          <h2>
+            Built to turn habits into
+            <span> meaningful insight</span>
+          </h2>
+          <p>
+            MindPulse uses a trained regression model to estimate a mental
+            health score from a student&apos;s academic, lifestyle, and digital
+            wellness profile.
+          </p>
+        </div>
+
+        <div className="model-stats" aria-label="Model performance metrics">
+          <article className="model-stat featured-stat">
+            <div className="model-stat-icon"><Gauge /></div>
+            <span className="model-stat-label">Test performance</span>
+            <strong>87.8%</strong>
+            <p>R² score on held-out test data</p>
+          </article>
+
+          <article className="model-stat">
+            <div className="model-stat-icon"><Brain /></div>
+            <span className="model-stat-label">Algorithm</span>
+            <strong>Random Forest</strong>
+            <p>Regression model for score prediction</p>
+          </article>
+
+          <article className="model-stat">
+            <div className="model-stat-icon"><Database /></div>
+            <span className="model-stat-label">Training data</span>
+            <strong>5,000 records</strong>
+            <p>Student social media and wellbeing data</p>
+          </article>
+
+          <article className="model-stat">
+            <div className="model-stat-icon"><ListChecks /></div>
+            <span className="model-stat-label">Prediction inputs</span>
+            <strong>12 factors</strong>
+            <p>Study, sleep, activity, stress, and more</p>
+          </article>
+        </div>
+
+        <p className="model-note">
+          Average prediction error (MAE): <strong>0.35 points</strong>. This
+          tool provides an educational estimate, not a clinical diagnosis.
+        </p>
       </section>
 
       {/* FEATURES */}
